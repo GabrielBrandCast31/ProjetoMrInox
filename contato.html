@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0b">
+  <title>Contato e Orçamento — Mr. Inox | Aço Inoxidável BH</title>
+  <meta name="description" content="Solicite seu orçamento de mobiliário em aço inoxidável. Telefone, WhatsApp, e-mail e endereço da Mr. Inox em Belo Horizonte.">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .map-wrap {
+      margin-top: var(--s-7);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid var(--steel-700);
+      aspect-ratio: 16/8;
+    }
+    .map-wrap iframe { width:100%; height:100%; border:0; filter: grayscale(.4) invert(.85) hue-rotate(180deg); }
+
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-4);
+      margin-top: var(--s-7);
+    }
+    @media (max-width: 720px) { .quick-actions { grid-template-columns: 1fr; } }
+    .quick-action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: var(--s-5);
+      background: var(--bg-2);
+      border: 1px solid var(--steel-700);
+      border-radius: var(--r-lg);
+      gap: var(--s-3);
+      transition: all .3s var(--ease-out);
+    }
+    .quick-action:hover {
+      transform: translateY(-4px);
+      border-color: var(--brand);
+      background: var(--bg-3);
+    }
+    .quick-action .qa-icon {
+      width: 48px; height: 48px;
+      display: grid; place-items: center;
+      background: var(--brand);
+      color: white;
+      border-radius: var(--r-md);
+    }
+    .quick-action h4 { margin-bottom: 4px; }
+    .quick-action p { font-size: .9rem; margin-bottom: var(--s-2); }
+    .quick-action strong { font-size: 1.05rem; color: var(--steel-100); font-family: var(--font-display); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand-link" aria-label="Mr. Inox — Página inicial">
+      <img src="assets/logo.png" alt="Mr. Inox">
+    </a>
+    <nav class="nav-primary" aria-label="Principal">
+      <a href="index.html#sobre">Empresa</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="index.html#segmentos">Segmentos</a>
+      <a href="index.html#galeria">Galeria</a>
+      <a href="index.html#clientes">Clientes</a>
+      <a href="contato.html" class="active">Contato</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#form" class="btn btn-ghost btn-sm">Solicitar Orçamento</a>
+      <a href="https://wa.me/5531984877372" class="btn btn-whats btn-sm" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.3 1.3 4.7L2 22l5.4-1.3c1.4.8 2.9 1.2 4.6 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu"><span></span></button>
+  </div>
+</header>
+
+<!-- Page hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> <span>›</span> <span>Contato</span>
+    </div>
+    <span class="eyebrow">Vamos conversar</span>
+    <h1 class="section-title">Conte para a gente o que você precisa <span class="text-brand">fabricar</span>.</h1>
+    <p>
+      Equipe técnica pronta para entender seu projeto. Atendimento direto com a
+      fábrica, sem intermediários.
+    </p>
+
+    <div class="quick-actions">
+      <a href="https://wa.me/5531984877372" target="_blank" rel="noopener" class="quick-action">
+        <div class="qa-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.3 1.3 4.7L2 22l5.4-1.3c1.4.8 2.9 1.2 4.6 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </div>
+        <h4>WhatsApp</h4>
+        <p>Resposta rápida em horário comercial.</p>
+        <strong>(31) 98487-7372</strong>
+      </a>
+
+      <a href="tel:+553132815047" class="quick-action">
+        <div class="qa-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h4>Telefone</h4>
+        <p>Fale direto com a equipe comercial.</p>
+        <strong>(31) 3281-5047</strong>
+      </a>
+
+      <a href="mailto:mr.inoxbh@gmail.com" class="quick-action">
+        <div class="qa-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+        </div>
+        <h4>E-mail</h4>
+        <p>Para projetos detalhados e anexos.</p>
+        <strong>mr.inoxbh@gmail.com</strong>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Form section -->
+<section class="contact" id="form">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Onde estamos</span>
+        <h2 class="section-title">Nossa <span class="text-brand">fábrica em BH</span></h2>
+        <p>
+          Visite-nos para conhecer nossa produção. Agendamentos pelo WhatsApp para
+          atendimento dedicado.
+        </p>
+
+        <div class="contact-list">
+          <a href="https://maps.google.com/?q=Av.+Elias+Antônio+Issa,+713,+Belo+Horizonte" class="contact-item" target="_blank" rel="noopener">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>Endereço</strong>
+              <span>Av. Elias Antônio Issa, 713 — Letícia/Venda Nova, BH-MG • CEP 31570-010</span>
+            </div>
+          </a>
+
+          <div class="contact-item">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <div>
+              <strong>Horário de Atendimento</strong>
+              <span>Segunda a Sexta: 08h às 18h • Sábados: 08h às 12h</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>
+            </div>
+            <div>
+              <strong>CNPJ</strong>
+              <span>17.765.191/0001-85</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-wrap reveal">
+          <iframe
+            loading="lazy"
+            src="https://maps.google.com/maps?q=Av.+Elias+Antônio+Issa,+713,+Belo+Horizonte&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            title="Localização Mr. Inox">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-1">
+        <h3>Solicite seu orçamento</h3>
+        <p class="form-lead">
+          Preencha os campos abaixo. Retornaremos pelo WhatsApp em até algumas horas
+          úteis com um direcionamento técnico.
+        </p>
+        <form id="quote-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+            </div>
+            <div class="form-field">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" required placeholder="(31) 9 9999-9999">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com">
+            </div>
+            <div class="form-field">
+              <label for="segmento">Segmento</label>
+              <select id="segmento" name="segmento">
+                <option value="">Selecione…</option>
+                <option>Restaurante</option>
+                <option>Pizzaria</option>
+                <option>Açougue</option>
+                <option>Sorveteria</option>
+                <option>Lanchonete</option>
+                <option>Indústria alimentícia</option>
+                <option>Outro</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="mensagem">Detalhes do projeto</label>
+            <textarea id="mensagem" name="mensagem" required placeholder="Conte um pouco sobre o que precisa fabricar: medidas, quantidade, prazo desejado…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            Enviar pelo WhatsApp
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.3 1.3 4.7L2 22l5.4-1.3c1.4.8 2.9 1.2 4.6 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </button>
+          <p class="form-note">Ao enviar, você será redirecionado ao nosso WhatsApp com a mensagem preenchida.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Mr. Inox">
+        <p>
+          Fabricação de mobiliário em aço inoxidável sob medida para cozinhas
+          industriais e indústria alimentícia. Belo Horizonte — MG.
+        </p>
+        <div class="footer-social">
+          <a href="https://instagram.com/mrinoxbh" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="https://wa.me/5531984877372" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.3 1.3 4.7L2 22l5.4-1.3c1.4.8 2.9 1.2 4.6 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </a>
+          <a href="mailto:mr.inoxbh@gmail.com" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html#sobre">Empresa</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="index.html#galeria">Galeria</a></li>
+          <li><a href="index.html#clientes">Clientes</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="produtos.html#cozinha">Cozinha Industrial</a></li>
+          <li><a href="produtos.html#pias">Pias Industriais</a></li>
+          <li><a href="produtos.html#refrigerados">Refrigerados</a></li>
+          <li><a href="produtos.html#mesas">Mesas e Bancadas</a></li>
+          <li><a href="produtos.html#higienizacao">Higienização</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+553132815047">(31) 3281-5047</a></li>
+          <li><a href="https://wa.me/5531984877372" target="_blank" rel="noopener">(31) 98487-7372</a></li>
+          <li><a href="mailto:mr.inoxbh@gmail.com">mr.inoxbh@gmail.com</a></li>
+          <li><span>Av. Elias Antônio Issa, 713 — BH/MG</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Mr. Inox — Fabricações em Aço Inoxidável. Todos os direitos reservados.</span>
+      <span>CNPJ 17.765.191/0001-85</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5531984877372" class="whats-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.3 1.3 4.7L2 22l5.4-1.3c1.4.8 2.9 1.2 4.6 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
