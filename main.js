@@ -97,6 +97,12 @@
     counters.forEach(c => cIo.observe(c));
   }
 
+  /* ---------- Infinite logo carousel ---------- */
+  document.querySelectorAll('.logo-track').forEach(track => {
+    track.insertAdjacentHTML('beforeend', track.innerHTML);
+    track.querySelectorAll('img').forEach(img => img.setAttribute('aria-hidden', 'true'));
+  });
+
   /* ---------- Lightbox for gallery ---------- */
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = lightbox?.querySelector('img');
