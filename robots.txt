@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Bloqueia arquivos auxiliares que não devem ser indexados
+Disallow: /catalogo-2021.pdf
+
+Sitemap: https://www.misterinox.com.br/sitemap.xml

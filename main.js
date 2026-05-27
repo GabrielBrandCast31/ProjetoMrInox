@@ -37,15 +37,26 @@
     const sections = [...navLinks]
       .map(a => document.querySelector(a.getAttribute('href')))
       .filter(Boolean);
+    // Cache offsets to avoid forced reflow on every scroll event
+    let offsets = [];
+    const measure = () => { offsets = sections.map(s => ({ id: s.id, top: s.offsetTop })); };
+    let ticking = false;
     const setActive = () => {
-      const scrollY = window.scrollY + 120;
+      const y = window.scrollY + 120;
       let current = null;
-      sections.forEach(s => { if (s.offsetTop <= scrollY) current = s.id; });
+      offsets.forEach(o => { if (o.top <= y) current = o.id; });
       navLinks.forEach(a => {
         a.classList.toggle('active', a.getAttribute('href') === '#' + current);
       });
+      ticking = false;
     };
-    window.addEventListener('scroll', setActive, { passive: true });
+    const onScrollSpy = () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(setActive); }
+    };
+    measure();
+    window.addEventListener('load', measure);
+    window.addEventListener('resize', measure, { passive: true });
+    window.addEventListener('scroll', onScrollSpy, { passive: true });
     setActive();
   }
 

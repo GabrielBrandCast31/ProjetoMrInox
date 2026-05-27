@@ -8,9 +8,11 @@
   <meta name="description" content="Solicite seu orçamento de mobiliário em aço inoxidável. Telefone, WhatsApp, e-mail e endereço da Mr. Inox em Belo Horizonte.">
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://www.misterinox.com.br/contato.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="styles.css">
 
   <style>
@@ -53,7 +55,7 @@
       color: white;
       border-radius: var(--r-md);
     }
-    .quick-action h4 { margin-bottom: 4px; }
+    .quick-action .qa-title { font-size: 1.125rem; font-family: var(--font-display); margin-bottom: 4px; }
     .quick-action p { font-size: .9rem; margin-bottom: var(--s-2); }
     .quick-action strong { font-size: 1.05rem; color: var(--steel-100); font-family: var(--font-display); }
   </style>
@@ -63,7 +65,7 @@
 <header class="site-header">
   <div class="container">
     <a href="index.html" class="brand-link" aria-label="Mr. Inox — Página inicial">
-      <img src="assets/logo.png" alt="Mr. Inox">
+      <img decoding="async" src="assets/logo.webp" width="320" height="75" alt="Mr. Inox">
     </a>
     <nav class="nav-primary" aria-label="Principal">
       <a href="index.html#sobre">Empresa</a>
@@ -84,6 +86,8 @@
   </div>
 </header>
 
+<main id="conteudo">
+
 <!-- Page hero -->
 <section class="page-hero">
   <div class="container">
@@ -102,7 +106,7 @@
         <div class="qa-icon">
           <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.4-2.4-1.4-.9-.8-1.5-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4 0-.1-.2-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.7.5 3.3 1.3 4.7L2 22l5.4-1.3c1.4.8 2.9 1.2 4.6 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
         </div>
-        <h4>WhatsApp</h4>
+        <h2 class="qa-title">WhatsApp</h2>
         <p>Resposta rápida em horário comercial.</p>
         <strong>(31) 98487-7372</strong>
       </a>
@@ -111,7 +115,7 @@
         <div class="qa-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z"/></svg>
         </div>
-        <h4>Telefone</h4>
+        <h2 class="qa-title">Telefone</h2>
         <p>Fale direto com a equipe comercial.</p>
         <strong>(31) 3281-5047</strong>
       </a>
@@ -120,7 +124,7 @@
         <div class="qa-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
         </div>
-        <h4>E-mail</h4>
+        <h2 class="qa-title">E-mail</h2>
         <p>Para projetos detalhados e anexos.</p>
         <strong>mr.inoxbh@gmail.com</strong>
       </a>
@@ -233,11 +237,13 @@
 </section>
 
 <!-- Footer -->
+</main>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Mr. Inox">
+        <img decoding="async" src="assets/logo.webp" width="320" height="75" alt="Mr. Inox">
         <p>
           Fabricação de mobiliário em aço inoxidável sob medida para cozinhas
           industriais e indústria alimentícia. Belo Horizonte — MG.

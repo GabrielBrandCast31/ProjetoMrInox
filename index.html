@@ -19,13 +19,21 @@
   <meta property="og:type" content="website">
 
   <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://www.misterinox.com.br/">
 
-  <!-- Fonts -->
+  <!-- Preload do LCP (imagem do hero) -->
+  <link rel="preload" as="image" href="assets/catalogo/hero.webp" fetchpriority="high">
+
+  <!-- Fonts (carregamento não-bloqueante) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet">
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  </noscript>
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -39,7 +47,7 @@
   <header class="site-header">
     <div class="container">
       <a href="#top" class="brand-link" aria-label="Mr. Inox — Página inicial">
-        <img src="assets/logo.png" alt="Mr. Inox">
+        <img decoding="async" src="assets/logo.webp" width="320" height="75" alt="Mr. Inox">
       </a>
 
       <nav class="nav-primary" aria-label="Principal">
@@ -65,6 +73,8 @@
       <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
     </div>
   </header>
+
+<main id="conteudo">
 
   <!-- =========================================================
      HERO
@@ -109,7 +119,7 @@
         </div>
 
         <div class="hero-visual reveal reveal-delay-2">
-          <img src="assets/catalogo/hero.jpg" alt="Estante em aço inoxidável de quatro planos fabricada pela Mr. Inox">
+          <img src="assets/catalogo/hero.webp" width="680" height="850" fetchpriority="high" decoding="async" alt="Estante em aço inoxidável de quatro planos fabricada pela Mr. Inox">
           <div class="hero-badge">
             <div class="badge-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -159,7 +169,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-visual reveal" style="position:relative;">
-          <img src="assets/info/fabrica-cozinha-industrial-01.jpg" alt="Fábrica Mr. Inox em Belo Horizonte">
+          <img loading="lazy" decoding="async" src="assets/info/fabrica-cozinha-industrial-01.webp" width="760" height="760" alt="Fábrica Mr. Inox em Belo Horizonte">
           <div class="about-floating">
             <strong>14</strong>
             <span>anos transformando aço em soluções de cozinha profissional</span>
@@ -189,7 +199,7 @@
                 <path d="M12 2L3 7v6c0 5 3.5 9 9 11 5.5-2 9-6 9-11V7l-9-5z" />
               </svg>
               <div>
-                <h4>Transparência</h4>
+                <h3>Transparência</h3>
                 <p>Compromisso visível em cada projeto, do orçamento à pós-venda.</p>
               </div>
             </div>
@@ -198,7 +208,7 @@
                 <path d="M20 7L9 18l-5-5" />
               </svg>
               <div>
-                <h4>Comprometimento</h4>
+                <h3>Comprometimento</h3>
                 <p>Prazo, especificação e acabamento entregues como combinados.</p>
               </div>
             </div>
@@ -208,7 +218,7 @@
                 <path d="M12 7v5l3 3" />
               </svg>
               <div>
-                <h4>Experiência</h4>
+                <h3>Experiência</h3>
                 <p>Quase 14 anos refinando técnica, repertório e atendimento.</p>
               </div>
             </div>
@@ -218,7 +228,7 @@
                 <path d="M3 12h18" />
               </svg>
               <div>
-                <h4>Sob medida</h4>
+                <h3>Sob medida</h3>
                 <p>Projeto e fabricação ajustados ao espaço e à operação do cliente.</p>
               </div>
             </div>
@@ -245,7 +255,7 @@
       <div class="products-grid">
         <a href="produtos.html#mesas" class="product-card reveal">
           <div class="product-image">
-            <img src="assets/catalogo/cat-mesas.jpg" alt="Mesa para manipulação em aço inox">
+            <img loading="lazy" decoding="async" src="assets/catalogo/cat-mesas.webp" width="760" height="570" alt="Mesa para manipulação em aço inox">
           </div>
           <div class="product-body">
             <h3>Mesas para Manipulação</h3>
@@ -261,7 +271,7 @@
 
         <a href="produtos.html#pias" class="product-card reveal reveal-delay-1">
           <div class="product-image">
-            <img src="assets/catalogo/cat-pias.jpg" alt="Pia e tanque em aço inox">
+            <img loading="lazy" decoding="async" src="assets/catalogo/cat-pias.webp" width="760" height="570" alt="Pia e tanque em aço inox">
           </div>
           <div class="product-body">
             <h3>Pias e Tanques</h3>
@@ -277,7 +287,7 @@
 
         <a href="produtos.html#carros" class="product-card reveal reveal-delay-2">
           <div class="product-image">
-            <img src="assets/catalogo/cat-carros.jpg" alt="Carro de transporte em aço inox">
+            <img loading="lazy" decoding="async" src="assets/catalogo/cat-carros.webp" width="760" height="570" alt="Carro de transporte em aço inox">
           </div>
           <div class="product-body">
             <h3>Carros</h3>
@@ -293,7 +303,7 @@
 
         <a href="produtos.html#prateleiras" class="product-card reveal">
           <div class="product-image">
-            <img src="assets/catalogo/cat-prateleiras.jpg" alt="Prateleira e escorredor em aço inox">
+            <img loading="lazy" decoding="async" src="assets/catalogo/cat-prateleiras.webp" width="760" height="570" alt="Prateleira e escorredor em aço inox">
           </div>
           <div class="product-body">
             <h3>Prateleiras e Escorredores</h3>
@@ -309,7 +319,7 @@
 
         <a href="produtos.html#estantes" class="product-card reveal reveal-delay-1">
           <div class="product-image">
-            <img src="assets/catalogo/cat-estantes.jpg" alt="Estante industrial em aço inox">
+            <img loading="lazy" decoding="async" src="assets/catalogo/cat-estantes.webp" width="760" height="570" alt="Estante industrial em aço inox">
           </div>
           <div class="product-body">
             <h3>Estantes</h3>
@@ -325,7 +335,7 @@
 
         <a href="produtos.html#higienizacao" class="product-card reveal reveal-delay-2">
           <div class="product-image">
-            <img src="assets/catalogo/cat-higiene.jpg" alt="Lavatório em aço inox">
+            <img loading="lazy" decoding="async" src="assets/catalogo/cat-higiene.webp" width="760" height="570" alt="Lavatório em aço inox">
           </div>
           <div class="product-body">
             <h3>Higienização e Banheiros</h3>
@@ -341,7 +351,7 @@
 
         <a href="produtos.html#armarios" class="product-card reveal">
           <div class="product-image">
-            <img src="assets/catalogo/cat-armarios.jpg" alt="Armário e balcão seco em aço inox">
+            <img loading="lazy" decoding="async" src="assets/catalogo/cat-armarios.webp" width="760" height="570" alt="Armário e balcão seco em aço inox">
           </div>
           <div class="product-body">
             <h3>Armários e Balcões Secos</h3>
@@ -358,7 +368,7 @@
         <a href="https://www.refrigeracaomisterinox.com.br" target="_blank" rel="noopener"
           class="product-card reveal reveal-delay-1">
           <div class="product-image">
-            <img src="assets/produtos/imagem-19.jpg" alt="Equipamentos refrigerados em inox">
+            <img loading="lazy" decoding="async" src="assets/produtos/imagem-19.webp" width="450" height="800" alt="Equipamentos refrigerados em inox">
           </div>
           <div class="product-body">
             <h3>Equipamentos Refrigerados</h3>
@@ -452,29 +462,29 @@
       </div>
 
       <div class="gallery-grid">
-        <div class="gallery-item tall reveal"><img loading="lazy" src="assets/produtos/imagem-01.jpg"
+        <div class="gallery-item tall reveal"><img decoding="async" loading="lazy" src="assets/produtos/imagem-01.webp" width="720" height="540"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal reveal-delay-1"><img loading="lazy" src="assets/produtos/imagem-03.jpg"
+        <div class="gallery-item reveal reveal-delay-1"><img decoding="async" loading="lazy" src="assets/produtos/imagem-03.webp" width="350" height="486"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal reveal-delay-2"><img loading="lazy" src="assets/produtos/imagem-08.jpg"
+        <div class="gallery-item reveal reveal-delay-2"><img decoding="async" loading="lazy" src="assets/produtos/imagem-08.webp" width="720" height="720"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item wide reveal reveal-delay-3"><img loading="lazy"
-            src="assets/slider/mister-tig-inox-05.jpg" alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal"><img loading="lazy" src="assets/produtos/imagem-09.jpg" alt="Projeto Mr. Inox">
+        <div class="gallery-item wide reveal reveal-delay-3"><img decoding="async" loading="lazy"
+            src="assets/slider/mister-tig-inox-05.webp" width="800" height="375" alt="Projeto Mr. Inox"></div>
+        <div class="gallery-item reveal"><img decoding="async" loading="lazy" src="assets/produtos/imagem-09.webp" width="720" height="720" alt="Projeto Mr. Inox">
         </div>
-        <div class="gallery-item reveal reveal-delay-1"><img loading="lazy" src="assets/produtos/imagem-12.jpg"
+        <div class="gallery-item reveal reveal-delay-1"><img decoding="async" loading="lazy" src="assets/produtos/imagem-12.webp" width="600" height="800"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal reveal-delay-2"><img loading="lazy" src="assets/produtos/imagem-13.jpg"
+        <div class="gallery-item reveal reveal-delay-2"><img decoding="async" loading="lazy" src="assets/produtos/imagem-13.webp" width="360" height="800"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal reveal-delay-3"><img loading="lazy" src="assets/produtos/imagem-14.jpg"
+        <div class="gallery-item reveal reveal-delay-3"><img decoding="async" loading="lazy" src="assets/produtos/imagem-14.webp" width="720" height="540"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item tall reveal"><img loading="lazy" src="assets/produtos/imagem-19.jpg"
+        <div class="gallery-item tall reveal"><img decoding="async" loading="lazy" src="assets/produtos/imagem-19.webp" width="450" height="800"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal reveal-delay-1"><img loading="lazy" src="assets/produtos/imagem-20.jpg"
+        <div class="gallery-item reveal reveal-delay-1"><img decoding="async" loading="lazy" src="assets/produtos/imagem-20.webp" width="600" height="800"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal reveal-delay-2"><img loading="lazy" src="assets/produtos/imagem-22.jpg"
+        <div class="gallery-item reveal reveal-delay-2"><img decoding="async" loading="lazy" src="assets/produtos/imagem-22.webp" width="450" height="800"
             alt="Projeto Mr. Inox"></div>
-        <div class="gallery-item reveal reveal-delay-3"><img loading="lazy" src="assets/produtos/imagem-24.jpg"
+        <div class="gallery-item reveal reveal-delay-3"><img decoding="async" loading="lazy" src="assets/produtos/imagem-24.webp" width="600" height="800"
             alt="Projeto Mr. Inox"></div>
       </div>
     </div>
@@ -483,7 +493,7 @@
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
     <button aria-label="Fechar">×</button>
-    <img src="" alt="">
+    <img loading="lazy" decoding="async" src="" alt="">
   </div>
 
   <!-- =========================================================
@@ -500,45 +510,45 @@
         </p>
       </div>
 
-      <div class="logo-cloud reveal" aria-label="Marcas atendidas pela Mr. Inox">
+      <div class="logo-cloud reveal" role="group" aria-label="Marcas atendidas pela Mr. Inox">
         <div class="logo-track">
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-01.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-01.webp" width="320" height="357"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-02.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-02.webp" width="320" height="307"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-03.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-03.webp" width="320" height="343"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-04.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-04.webp" width="320" height="318"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-05.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-05.webp" width="320" height="323"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-06.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-06.webp" width="320" height="310"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-07.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-07.webp" width="320" height="318"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-08.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-08.webp" width="320" height="317"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-09.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-09.webp" width="320" height="340"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-10.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-10.webp" width="320" height="315"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-11.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-11.webp" width="320" height="325"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-12.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-12.webp" width="320" height="341"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-13.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-13.webp" width="320" height="353"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-14.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-14.webp" width="320" height="323"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-15.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-15.webp" width="320" height="324"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-16.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-16.webp" width="320" height="304"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-17.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-17.webp" width="320" height="324"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-18.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-18.webp" width="320" height="336"
               alt="Cliente Mr. Inox"></div>
-          <div class="logo-item"><img loading="lazy" src="assets/clientes/empresas-ultracongeladas-19.png"
+          <div class="logo-item"><img decoding="async" loading="lazy" src="assets/clientes/empresas-ultracongeladas-19.webp" width="320" height="321"
               alt="Cliente Mr. Inox"></div>
         </div>
       </div>
@@ -709,11 +719,13 @@
   <!-- =========================================================
      FOOTER
      ========================================================= -->
-  <footer class="site-footer">
+  </main>
+
+<footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="Mr. Inox">
+          <img decoding="async" src="assets/logo.webp" width="320" height="75" alt="Mr. Inox">
           <p>
             Fabricação de mobiliário em aço inoxidável sob medida para cozinhas
             industriais e indústria alimentícia. Belo Horizonte — MG.

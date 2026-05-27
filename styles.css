@@ -17,15 +17,15 @@
   --steel-100: #f1f1f3;
   --steel-200: #d4d4d8;
   --steel-300: #a1a1aa;
-  --steel-400: #71717a;
-  --steel-500: #52525b;
+  --steel-400: #9a9aa3;
+  --steel-500: #82828c;
   --steel-600: #3f3f46;
   --steel-700: #2a2a2e;
   --steel-800: #1c1c1f;
 
   /* Brand */
   --brand:        #c8102e;
-  --brand-bright: #e11d3c;
+  --brand-bright: #f23a52;
   --brand-dark:   #8b0a1f;
   --brand-glow:   rgba(200, 16, 46, 0.35);
 
@@ -590,7 +590,7 @@ section.tight { padding: var(--s-8) 0; }
   border-radius: var(--r-md);
 }
 .about-pillars .pillar svg { width: 24px; height: 24px; color: var(--brand-bright); flex-shrink:0; }
-.about-pillars .pillar h4 { margin-bottom: 4px; }
+.about-pillars .pillar h3 { font-size: 1.05rem; margin-bottom: 4px; }
 .about-pillars .pillar p { font-size: .92rem; margin: 0; }
 @media (max-width: 540px) {
   .about-pillars { grid-template-columns: 1fr; }
@@ -883,7 +883,7 @@ section.tight { padding: var(--s-8) 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('assets/slider/banner-13.png') center/cover;
+  background: url('assets/slider/banner-13.webp') center/cover;
   opacity: .12;
   z-index: -1;
 }
