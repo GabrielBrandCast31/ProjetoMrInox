@@ -649,6 +649,20 @@ section.tight { padding: var(--s-8) 0; }
   display: flex;
   flex-direction: column;
 }
+.product-card .product-code {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--brand-bright);
+  background: rgba(200, 16, 46, .1);
+  border: 1px solid rgba(200, 16, 46, .25);
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+  margin-bottom: var(--s-3);
+}
 .product-card h3 {
   font-size: 1.2rem;
   margin-bottom: var(--s-2);
