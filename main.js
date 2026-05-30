@@ -17,18 +17,18 @@
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-primary');
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
+    const setMenu = (open) => {
+      nav.classList.toggle('open', open);
       toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
       document.body.style.overflow = open ? 'hidden' : '';
-    });
-    nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        nav.classList.remove('open');
-        toggle.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+    };
+    toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    // Fechar com ESC ou ao redimensionar para desktop
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth > 980) setMenu(false); });
   }
 
   /* ---------- Active nav link by section in viewport (home only) ---------- */
