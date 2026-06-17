@@ -1216,6 +1216,11 @@ section.tight { padding: var(--s-8) 0; }
 .reveal-delay-3 { transition-delay: .24s; }
 .reveal-delay-4 { transition-delay: .32s; }
 
+/* O conteúdo do hero (acima da dobra) é pintado imediatamente — não pode
+   ficar em opacity:0 esperando o JS/IntersectionObserver, pois isso atrasa
+   o LCP. A animação reveal segue valendo para as seções abaixo da dobra. */
+.hero .reveal { opacity: 1; transform: none; transition: none; }
+
 /* =========================================================
    Helpers
    ========================================================= */
