@@ -114,6 +114,22 @@
     track.querySelectorAll('img').forEach(img => img.setAttribute('aria-hidden', 'true'));
   });
 
+  /* ---------- Carousel hover — usa getBoundingClientRect para posição visual real ---------- */
+  document.querySelectorAll('.logo-cloud').forEach(cloud => {
+    const items = () => cloud.querySelectorAll('.logo-item');
+    cloud.addEventListener('mousemove', (e) => {
+      items().forEach(item => {
+        const r = item.getBoundingClientRect();
+        const hit = e.clientX >= r.left && e.clientX <= r.right &&
+                    e.clientY >= r.top  && e.clientY <= r.bottom;
+        item.classList.toggle('is-hovered', hit);
+      });
+    });
+    cloud.addEventListener('mouseleave', () => {
+      items().forEach(item => item.classList.remove('is-hovered'));
+    });
+  });
+
   /* ---------- Lightbox for gallery ---------- */
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = lightbox?.querySelector('img');
